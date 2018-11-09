@@ -4,20 +4,18 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user",schema = "recommend")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "ID")
     private long id;
-    @Column(name = "FULLNAME")
+    @Column(name = "fullname")
     private String fullName;
-    @Column(name = "CREATEDATE")
+    @Column(name = "create_date")
     private LocalDateTime createdDate;
-    @Column(name = "UPDATEDATE")
+    @Column(name = "update_date")
     private LocalDateTime updatedDate;
-    @Column(name = "EMAIL")
     private String email;
 
     public User() {
